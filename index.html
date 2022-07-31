@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div id="gradient">
+		<h1 class="bg-white">Gradient Generator</h1>
+		
+		<div>
+			<div class="margin-y">
+				<label for="color1" class="label">First Color : </label>
+				<input class="color1" type="color" name="color1" value="#4D88EA">
+				&nbsp;&nbsp;
+				<label for="color2" class="label">Second Color : </label>
+				<input class="color2" type="color" name="color2" value="#0D39E1">
+			</div>
+	
+			<div class="margin-y">
+				<label for="direction" class="label">Direction : </label>
+				<select name="direction" id="direction">
+					<option value="90">Left To Right</option>
+					<option value="270">Right To Left</option>
+					<option value="180">Top To Bottom</option>
+					<option value="0">Bottom To Top</option>
+				</select>
+			</div>
+		</div>
+		<!-- oninput = "setGradient()" attribute will also work in input element -->
+	
+		<h2 class="current">Current CSS Background</h2>
+		<h3 class="bg-white">linear-gradient(to right, #4D88EA , #0D39E1)</h3>
+		<button class="copy-btn" onclick="copyText()">Copy CSS</button>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
